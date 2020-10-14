@@ -12,16 +12,20 @@ namespace AR_SSE.Views
     public partial class LoginView : UserControl
     {
         private LoginViewModel _loginViewModel;
+        private NavigationService _nav;
+
+        public NavigationService Nav
+        {
+            get => _nav;
+            set => _nav = value;
+        }
+
         public LoginView()
         {
             InitializeComponent();
             _loginViewModel= new LoginViewModel();
             this.DataContext = _loginViewModel;
-        }
-
-        public LoginView GetView()
-        {
-            return this;
+            Nav = NavigationService.GetNavigationService(this);
         }
     }
 }

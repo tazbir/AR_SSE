@@ -31,6 +31,7 @@ namespace AR_SSE.ViewModels
         private readonly AuthorizationService _authorizationService;
         private UserCredential _userCredential;
         private LoginCommand _authorizeCommand;
+        private bool _authorizationStatus;
 
         #endregion
 
@@ -41,7 +42,12 @@ namespace AR_SSE.ViewModels
             set { _userCredential = value; OnPropertyChanged(nameof(UserCredential)); }
         }
 
-        public bool AuthorizationStatus { get; set; }
+        public bool AuthorizationStatus
+        {
+            get => _authorizationStatus;
+            set { _authorizationStatus = value; OnPropertyChanged(nameof(AuthorizationStatus)); }
+        }
+
         #endregion
         
         #region Constructor
@@ -62,8 +68,10 @@ namespace AR_SSE.ViewModels
 
             if (AuthorizationStatus)
             {
-                NavigationService nav = NavigationService.GetNavigationService(new LoginView().GetView());
-                nav?.Navigate(new Uri("Views/FileList.xaml", UriKind.RelativeOrAbsolute));
+                NavigationWindow nw = new NavigationWindow();
+                nw.Content = new FileList();
+                nw.ShowDialog();
+
             }
         }
 

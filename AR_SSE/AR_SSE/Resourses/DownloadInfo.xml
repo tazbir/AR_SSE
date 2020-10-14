@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<files>
+    <file title="Master Zip" link="https://github.com/torvalds/linux/archive/master.zip">
+    </file>
+    <file title="Sample Zip" link="https://demo-res.cloudinary.com/image/upload/sample.png">
+    </file>
+    <file title="https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz" link="1211312">
+    </file>
+</files>
+
