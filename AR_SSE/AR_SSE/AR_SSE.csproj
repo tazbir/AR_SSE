@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Services\AuthorizationService.cs" />
+    <Compile Include="Services\IAuthoziationService.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,6 +95,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSE.DAL\SSE.DAL.csproj">
+      <Project>{7289cb1b-f81b-4da6-b098-d8ca1c3d9eab}</Project>
+      <Name>SSE.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSE.Model\SSE.Model.csproj">
+      <Project>{f6382af3-1c32-40f7-a07d-a6f059478ebf}</Project>
+      <Name>SSE.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
