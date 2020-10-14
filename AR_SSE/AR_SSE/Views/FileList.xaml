@@ -17,7 +17,7 @@
                   Grid.RowSpan="2" ItemsSource="{Binding Path=FileListDataCollection}">
         <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Width="auto" Binding="{Binding Path=Title}"></DataGridTextColumn>
-                <DataGridTextColumn Header="Link" Width="auto" Binding="{Binding Path=Link}"></DataGridTextColumn>
+                <DataGridHyperlinkColumn Header="Link" Width="auto" Binding="{Binding Path=Link}"></DataGridHyperlinkColumn>
         </DataGrid.Columns>
         </DataGrid>
     </Grid>
