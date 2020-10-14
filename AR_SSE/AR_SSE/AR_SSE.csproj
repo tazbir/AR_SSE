@@ -56,7 +56,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Services\AuthorizationService.cs" />
-    <Compile Include="Services\IAuthoziationService.cs" />
+    <Compile Include="Services\FileListService.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

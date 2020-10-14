@@ -4,7 +4,7 @@ using SSE.Model.Models;
 
 namespace SSE.DAL.Repositories
 {
-    class AuthorizationRepository:IAuthorizationRepository
+    public class AuthorizationRepository
     {
         public bool Authorize(UserCredential userCredential)
         {
