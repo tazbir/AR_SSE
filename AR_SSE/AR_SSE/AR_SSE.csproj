@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\LoginCommand.cs" />
     <Compile Include="Services\AuthorizationService.cs" />
     <Compile Include="Services\FileListService.cs" />
     <Compile Include="ViewModels\FileListViewModel.cs" />
@@ -122,8 +123,6 @@
       <Name>SSE.Model</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,32 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<config xmlns="urn:config-schema">
-    <login>
-        <users>
-            <user>
-                <username>
-                    user1
-                </username>
-                <password>
-                    179456!@
-                </password>
-            </user>
-            <user>
-                <username>
-                    user2
-                </username>
-                <password>
-                    179456!@
-                </password>
-            </user>
-            <user>
-                <username>
-                    user3
-                </username>
-                <password>
-                    179456!@
-                </password>
-            </user>
-        </users>
-    </login>
-</config>
+<users>
+    <user>
+        <UserName>user1</UserName><Password>179456!@</Password>
+    </user>
+    <user>
+        <UserName>user2</UserName><Password>179456!@</Password>
+    </user>
+    <user>
+        <UserName>user3</UserName><Password>179456!@</Password>
+    </user>
+</users>
 

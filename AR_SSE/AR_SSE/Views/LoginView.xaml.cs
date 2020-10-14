@@ -19,10 +19,9 @@ namespace AR_SSE.Views
             this.DataContext = _loginViewModel;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public LoginView GetView()
         {
-            NavigationService nav= NavigationService.GetNavigationService(this);
-            nav?.Navigate(new Uri("Views/FileList.xaml", UriKind.RelativeOrAbsolute));
+            return this;
         }
     }
 }

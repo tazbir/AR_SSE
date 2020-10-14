@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AR_SSE"
         mc:Ignorable="d"
-        Title="AR_SSE" Height="450" Width="571.271"
+        Title="AR_SSE" Height="500" Width="571.271"
         xmlns:vWindow="clr-namespace:AR_SSE.Views">
     <DockPanel>
         <Frame x:Name="_mainFrame" />

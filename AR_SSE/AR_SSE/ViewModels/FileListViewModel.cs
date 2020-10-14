@@ -11,33 +11,44 @@ using SSE.Model.Models;
 
 namespace AR_SSE.ViewModels
 {
-    public class FileListViewModel:INotifyPropertyChanged
+    public sealed class FileListViewModel:INotifyPropertyChanged
     {
+        #region private variables
         private FileListService _fileListService;
         private List<FileListData> _fileListDataCollection;
-        public event PropertyChangedEventHandler PropertyChanged;
+        #endregion
 
+        #region implemented from interface
+        public event PropertyChangedEventHandler PropertyChanged;
         [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+        #endregion
 
+        #region Constructor
         public FileListViewModel()
         {
-            _fileListService= new FileListService();
+            _fileListService = new FileListService();
             LoadData();
         }
+        #endregion
 
+        #region public Properties
         public List<FileListData> FileListDataCollection
         {
             get => _fileListDataCollection;
-            set { _fileListDataCollection = value; OnPropertyChanged(nameof(FileListDataCollection));}
+            set { _fileListDataCollection = value; OnPropertyChanged(nameof(FileListDataCollection)); }
         }
+        #endregion
 
+        #region Private Methods
         private void LoadData()
         {
             FileListDataCollection = _fileListService.GetAll();
         }
+        #endregion
+
     }
 }
