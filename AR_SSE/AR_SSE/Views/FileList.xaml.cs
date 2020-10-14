@@ -12,24 +12,21 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using AR_SSE.Views;
+using AR_SSE.ViewModels;
 
-namespace AR_SSE
+namespace AR_SSE.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for FileList.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class FileList : Page
     {
-        public MainWindow()
+        private FileListViewModel _fileListViewModel;
+        public FileList()
         {
             InitializeComponent();
-            _mainFrame.Navigate(new LoginView());
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
+            _fileListViewModel = new FileListViewModel();
+            DataContext = _fileListViewModel;
         }
     }
 }

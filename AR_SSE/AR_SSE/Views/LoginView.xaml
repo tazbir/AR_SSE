@@ -24,7 +24,7 @@
         <TextBox Grid.Row="2" Grid.Column="1" Margin="5,8" Padding="3"></TextBox>
 
         <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" >
-            <Button Width="100"  Content="Login" Margin="5,8" Padding="3"></Button>
+            <Button Width="100"  Content="Login" Margin="5,8" Padding="3" Click="Button_Click"></Button>
         </StackPanel>
     </Grid>
 </UserControl>

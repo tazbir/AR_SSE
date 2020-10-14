@@ -7,12 +7,7 @@
         mc:Ignorable="d"
         Title="AR_SSE" Height="450" Width="571.271"
         xmlns:vWindow="clr-namespace:AR_SSE.Views">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="288*"/>
-            <ColumnDefinition Width="277*"/>
-        </Grid.ColumnDefinitions>
-        <vWindow:LoginView Grid.ColumnSpan="2"></vWindow:LoginView>
-
-    </Grid>
+    <DockPanel>
+        <Frame x:Name="_mainFrame" />
+    </DockPanel>
 </Window>

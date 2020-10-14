@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
+using AR_SSE.ViewModels;
 
 namespace AR_SSE.Views
 {
@@ -20,9 +11,18 @@ namespace AR_SSE.Views
     /// </summary>
     public partial class LoginView : UserControl
     {
+        private LoginViewModel _loginViewModel;
         public LoginView()
         {
             InitializeComponent();
+            _loginViewModel= new LoginViewModel();
+            this.DataContext = _loginViewModel;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav= NavigationService.GetNavigationService(this);
+            nav?.Navigate(new Uri("Views/FileList.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

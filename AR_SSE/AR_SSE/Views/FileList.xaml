@@ -1,0 +1,24 @@
+﻿<Page x:Class="AR_SSE.Views.FileList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AR_SSE.Views"
+      mc:Ignorable="d" 
+      Title="FileList">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Text="download List" HorizontalAlignment="Center"></TextBlock>
+        <DataGrid Name="dgFileList" AutoGenerateColumns="False" Margin="5,48,5,8" Padding="3" Grid.Row="0"
+                  Grid.RowSpan="2" ItemsSource="{Binding Path=FileListDataCollection}">
+        <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Width="auto" Binding="{Binding Path=Title}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Link" Width="auto" Binding="{Binding Path=Link}"></DataGridTextColumn>
+        </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

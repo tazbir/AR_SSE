@@ -8,7 +8,7 @@ using SSE.Model.Models;
 
 namespace AR_SSE.Services
 {
-    class AuthorizationService
+    public class AuthorizationService
     {
         private AuthorizationRepository _authorizationRepository;
         public AuthorizationService()
