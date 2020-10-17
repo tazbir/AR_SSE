@@ -74,7 +74,7 @@ namespace AR_SSE.ViewModels
             if (AuthorizationStatus)
             {
                 _loginView.Visibility = Visibility.Hidden;
-                _mainWindow.Content= new FileList();
+                _mainWindow.Content= new FileList(_mainWindow);
 
                 
             }

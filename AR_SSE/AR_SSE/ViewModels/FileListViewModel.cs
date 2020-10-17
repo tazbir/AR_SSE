@@ -16,6 +16,9 @@ namespace AR_SSE.ViewModels
         #region private variables
         private FileListService _fileListService;
         private List<FileListData> _fileListDataCollection;
+        private string _downloadStatus;
+        private double _progressBarStatus;
+
         #endregion
 
         #region implemented from interface
@@ -41,6 +44,19 @@ namespace AR_SSE.ViewModels
             get => _fileListDataCollection;
             set { _fileListDataCollection = value; OnPropertyChanged(nameof(FileListDataCollection)); }
         }
+
+        public string DownloadStatus
+        {
+            get => _downloadStatus;
+            set { _downloadStatus = value; OnPropertyChanged(nameof(DownloadStatus)); }
+        }
+
+        public double ProgressBarStatus
+        {
+            get => _progressBarStatus;
+            set { _progressBarStatus = value; OnPropertyChanged(nameof(ProgressBarStatus)); }
+        }
+
         #endregion
 
         #region Private Methods
