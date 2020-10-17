@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Navigation;
 using AR_SSE.Commands;
 using AR_SSE.Services;
@@ -32,6 +33,8 @@ namespace AR_SSE.ViewModels
         private UserCredential _userCredential;
         private LoginCommand _authorizeCommand;
         private bool _authorizationStatus;
+        private LoginView _loginView;
+        private MainWindow _mainWindow;
 
         #endregion
 
@@ -51,11 +54,13 @@ namespace AR_SSE.ViewModels
         #endregion
         
         #region Constructor
-        public LoginViewModel()
+        public LoginViewModel(LoginView loginView, MainWindow mainWindow)
         {
             UserCredential = new UserCredential();
             _authorizationService = new AuthorizationService();
             _authorizeCommand = new LoginCommand(Authorize);
+            _loginView = loginView;
+            _mainWindow = mainWindow;
         }
         #endregion
 
@@ -68,10 +73,10 @@ namespace AR_SSE.ViewModels
 
             if (AuthorizationStatus)
             {
-                NavigationWindow nw = new NavigationWindow();
-                nw.Content = new FileList();
-                nw.ShowDialog();
+                _loginView.Visibility = Visibility.Hidden;
+                _mainWindow.Content= new FileList();
 
+                
             }
         }
 

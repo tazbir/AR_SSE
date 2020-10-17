@@ -24,12 +24,8 @@ namespace AR_SSE
         public MainWindow()
         {
             InitializeComponent();
-            _mainFrame.Navigate(new LoginView());
+            _mainFrame.Navigate(new LoginView(this));
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }

@@ -15,10 +15,20 @@
         <TextBlock Text="download List" HorizontalAlignment="Center"></TextBlock>
         <DataGrid Name="dgFileList" AutoGenerateColumns="False" Margin="5,48,5,8" Padding="3" Grid.Row="0"
                   Grid.RowSpan="2" ItemsSource="{Binding Path=FileListDataCollection}">
-        <DataGrid.Columns>
+
+            
+            <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Width="auto" Binding="{Binding Path=Title}"></DataGridTextColumn>
                 <DataGridHyperlinkColumn Header="Link" Width="auto" Binding="{Binding Path=Link}"></DataGridHyperlinkColumn>
-        </DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button>Details</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+</DataGrid.Columns>
         </DataGrid>
     </Grid>
 </Page>
